@@ -34,6 +34,7 @@ body{
     right: 20px;
     position: fixed;
     transition: 0.5s;
+    z-index: 999;
 }
 
 .indicador.dark{
@@ -244,7 +245,7 @@ div.pesquisa{
 
 .terra{
     margin: clamp(15px, 6vw, 90px) clamp(30px, 40vw, 990px) clamp(10px, 6vw, 90px) clamp(30px, 40vw, 990px);
-    width: clamp(100px, 40vw, 400px);
+    width: clamp(200px, 40vw, 400px);
     height: auto;
     animation: flute 3s ease-in-out infinite;
 }
@@ -263,4 +264,38 @@ div.pesquisa{
 
 html{
     scroll-behavior: smooth;
+}
+
+
+/* Media Queries para alguns elementos */
+
+@media (max-width: 480px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .terra{
+        width: clamp(150px, 80vw, 400px);
+        margin: clamp(70px, 10vw, 90px) clamp(60px, 10vw, 90px) clamp(30px, 10vw, 90px) clamp(40px, 10vw, 90px);
+    }
+}
+
+
+@media (max-width: 768px){
+    html, body{
+        overflow-x: hidden;
+    }
+    
+    .terra{
+        width: clamp(150px, 80vw, 400px);
+        margin: clamp(70px, 10vw, 90px) clamp(60px, 10vw, 90px) clamp(30px, 10vw, 90px) clamp(40px, 10vw, 90px);
+    }
+}
+
+@media (max-width: 1024px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+
 }
