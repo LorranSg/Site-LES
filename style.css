@@ -285,7 +285,6 @@ html{
     html, body{
         overflow-x: hidden;
     }
-    
     .terra{
         width: clamp(150px, 80vw, 400px);
         margin: clamp(70px, 10vw, 90px) clamp(60px, 10vw, 90px) clamp(30px, 10vw, 90px) clamp(40px, 10vw, 90px);
@@ -296,6 +295,62 @@ html{
     html, body{
         overflow-x: hidden;
     }
+}
 
+section{
+    display: grid;
+    margin-bottom: clamp(20px, 3vw, 32px);
+    padding: clamp(20px, 3vw, 32px);
+}
 
+.imagem-CEFET{
+    width: clamp(300px, 40vw, 600px);
+    height: auto;
+    margin-top: clamp(20px, 3vw, 32px);
+    border-radius:16px;
+    padding-bottom: clamp(10px, 1vw, 20px);
+    align-self: center;
+}
+
+.lesp{
+    line-height: clamp(20px, 3vw, 40px);
+    margin-bottom: clamp(10px, 1vw, 20px);
+}
+
+.menu-link-c{
+    border-radius: 8px;
+    color: var(--blackthemeobj);
+    text-decoration: none;
+    font-size: clamp(12px, 1vw, 24px);
+    transition: 0.5s;
+    padding: clamp(4px, 0.5vw, 8px) clamp(8px, 1vw, 16px);
+
+}
+
+@media (hover: hover){
+    .menu-link-c:hover{
+        color: #fff;
+        background-color: #016b08;
+    }
+}
+
+@media (hover: hover){
+     .menu-link-c.dark:hover{
+        color: #333;
+        background-color: #fff;
+    }
+}
+
+@media (hover: none){
+    .menu-link-c:active{
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+@media (hover: none){
+     .menu-link-c.dark:active{
+        color: #333;
+        background-color: #fff;
+    }
 }
