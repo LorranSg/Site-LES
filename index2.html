@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="cabecalho">
+    <header>
+        <div class="cabecalho">
             <div class="pesquisa">
                 <input class="input-pesquisa" type="text" placeholder="Pesquise">
             </div>
             <div class="menucbc">
-                <a class= 'menu-link'href="index.html">Voltar</a>
+                <a class="menu-link" href="index.html">Voltar</a>
             </div>
+        </div>
+    </header>
 
+    
     <div class="container">
-    <input type="text" id="campoOrigem" placeholder="Digite o ponto de partida...">
-  <button id="btnCalcular">Calcular Distância</button>
-  </div>
-  
-  <div id="resultado"></div>
-      <div class="indicador">
+        <h1>Menos Desperdício</h1>
+        <h4>O que você deseja reciclar?</h4>
+            <div class="checkboxes">
+                
+                <input type="checkbox" name="Plásticos" id="plasticos">
+                <label for="plasticos">Plásticos</label>
+                <input type="checkbox" name="Roupas" id="roupas">
+                <label for="roupas">Roupas</label>
+                <input type="checkbox" name="Papel" id="papel">
+                <label for="papel">Papel</label>
+                <input type="checkbox" name="Eletronicos" id="eletronicos">
+                <label for="Eletronicos">Eletrônicos</label>
+                <input type="checkbox" name="Metais" id="metais">
+                <label for="metais">Metais</label>
+                <input type="checkbox" name="Brinquedos" id="brinquedos">
+                <label for="brinquedos">Brinquedos</label>
+            </div>
+            <input type="text" id="campoOrigem" placeholder="Digite o ponto de partida:">
+        <button id="btnCalcular">Calcular Distância</button>
+        <div id="resultado"></div>
+    </div>
+    
+
+    <div class="indicador">
         <svg class="lampada" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Corpo da lâmpada -->
             <path d="M9 21h6"/>
             <path d="M10 17h4"/>
-    <!-- Filamento interior -->
             <path d="M12 3a6 6 0 0 1 6 6c0 2.5-1.5 4.5-3 6H9c-1.5-1.5-3-3.5-3-6a6 6 0 0 1 6-6z"/>
         </svg>
     </div>
+
     <script src="script.js"></script>
     <script src="script2.js"></script>
 </body>

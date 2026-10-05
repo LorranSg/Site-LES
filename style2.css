@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+::root{
+    --blackthemeobj: #fff;
+    --whitethemeobj: #333;
+}
+
+body{
+    background-color: #212121;
+    transition: 0.5s;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* Estilo do Botão */
+.indicador{
+    width: clamp(40px, 8vw, 70px);
+    height: clamp(40px, 8vw, 70px);
+    background-color: #4d4d44;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(0.9);
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.indicador.dark{
+    background-color: #dddddd;
+}
+
+
+body.dark{
+    background-color: var(--blackthemeobj);
+    color: var(--whitethemeobj);
+}
+
+.lampada {
+    width: clamp(20px, 4vw, 32px);
+    height: clamp(20px, 4vw, 32px);
+}
+
+header{
+    width: 100%;
+    height: clamp(60px, 4vw, 32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.142);
+    border-radius: 4px;
+    margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+header.dark{
+    border-bottom: 1px solid hsla(0, 0%, 20%, 0.27);
+}
+
+div.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: clamp(0px, 5vw, 100px);
+    column-gap: clamp(20px, 20vw, 80px);
+    overflow: hidden;
+}
+
+
+/* Estilo do Menu */
+div.menucbc{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: clamp(8px, 1vw, 16px);
+}
+
+.menu-link{
+    border-radius: 8px;
+    color: var(--blackthemeobj);
+    text-decoration: none;
+    font-size: clamp(12px, 1vw, 24px);
+    transition: 0.5s;
+    padding: clamp(4px, 0.5vw, 8px) clamp(8px, 1vw, 16px);
+    
+}
+
+/* --- Links do Menu (Tema Escuro Padrão) --- */
+.menu-link {
+    border-radius: 8px;
+    color: var(--blackthemeobj); /* Texto branco (#fff) */
+    text-decoration: none;
+    font-size: clamp(12px, 1vw, 24px);
+    transition: 0.5s;
+    padding: clamp(4px, 0.5vw, 8px) clamp(8px, 1vw, 16px);
+}
+
+/* Hover no Tema Escuro -> Fundo Branco e Texto Escuro */
+@media (hover: hover) {
+    .menu-link:hover {
+        color: #212121;
+        background-color: #fff;
+    }
+}
+
+/* Clique em telas touch no Tema Escuro */
+@media (hover: none) {
+    .menu-link:active {
+        color: #212121;
+        background-color: #fff;
+    }
+}
+
+
+/* --- Links do Menu (Tema Claro) --- */
+body.dark .menu-link,
+.menu-link.dark {
+    color: var(--whitethemeobj); /* Texto escuro (#333) */
+}
+
+/* Hover no Tema Claro -> Fundo Escuro e Texto Branco */
+@media (hover: hover) {
+    body.dark .menu-link:hover,
+    .menu-link.dark:hover {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+/* Clique em telas touch no Tema Claro */
+@media (hover: none) {
+    body.dark .menu-link:active,
+    .menu-link.dark:active {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+
+/* Estilo do Input de Pesquisa */
+div.pesquisa{
+    flex-grow: 5;
+    flex-shrink: 1;
+}
+
+
+.input-pesquisa {
+    width: clamp(100px, 40vw, 400px);
+    height: clamp(30px, 2vw, 50px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Borda visível no escuro */
+    background-color: transparent;
+    padding: 0 10px;
+    font-size: clamp(12px, 1vw, 24px);
+    outline: none;
+    color: var(--blackthemeobj);
+    transition: 0.5s;
+}
+
+.input-pesquisa::placeholder {
+    color: #fff; /* Placeholder visível no escuro */
+    transition: 0.5s;
+}
+
+/* Input quando o Modo Claro (.dark) está ativo */
+body.dark .input-pesquisa,
+.input-pesquisa.dark {
+    border: 1px solid #333; /* Borda visível no claro */
+    color: var(--whitethemeobj);
+}
+
+body.dark .input-pesquisa::placeholder,
+.input-pesquisa.dark::placeholder {
+    color: #333; /* Placeholder escuro no modo claro */
+}
+
+#campoOrigem {
+    flex: 1;
+    width: clamp(100px, 40vw, 400px);
+    height: clamp(30px, 2vw, 50px);
+    padding: 7px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s;
+    outline: none;
+}
+
+#campoOrigem::placeholder {
+    color: #fff;
+}
+
+/* Quando o modo claro estiver ativo no body */
+body.dark #campoOrigem {
+    border: 1px solid #333;
+    color: #333;
+}
+
+body.dark #campoOrigem::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(12px, 3vw, 20px);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: clamp(8px, 1vw, 16px);
+}
+
+/* Botão no Tema Escuro (Padrão) */
+/* Botão no Tema Escuro (Padrão) */
+#btnCalcular {
+    padding: clamp(4px, 0.5vw, 8px) clamp(8px, 1vw, 16px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    color: var(--blackthemeobj); /* Texto branco (#fff) */
+    font-size: clamp(12px, 1vw, 24px);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Hover no Tema Escuro -> Fundo Branco e Texto Escuro */
+@media (hover: hover) {
+    #btnCalcular:hover {
+        background-color: #fff;
+        color: #212121;
+        border-color: #fff;
+    }
+}
+
+/* Clique no Botão */
+#btnCalcular:active {
+    transform: scale(0.97);
+}
+
+
+/* --- Tema Claro (Body com a classe .dark) --- */
+
+body.dark #btnCalcular,
+#btnCalcular.dark {
+    border: 1px solid #333;
+    background-color: transparent;
+    color: var(--whitethemeobj); /* Texto escuro (#333) */
+}
+
+/* Hover no Tema Claro -> Fundo Escuro e Texto Branco */
+@media (hover: hover) {
+    body.dark #btnCalcular:hover,
+    #btnCalcular.dark:hover {
+        background-color: #333;
+        color: #fff;
+        border-color: #333;
+    }
+}
+
+.checkboxes {
+    display: flex;
+    gap: clamp(9px, 1vw, 16px);
+    margin-bottom: clamp(8px, 1vw, 16px);
+
+}

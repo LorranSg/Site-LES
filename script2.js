@@ -83,7 +83,7 @@ document.getElementById('btnCalcular').addEventListener('click', async () => {
   try {
     const res = await calcularDistanciaAteDestinoFixo(inputOrigem);
     divResultado.innerHTML = `
-      <p><strong>Distância:</strong> ${res.distanciaKm} km</p>
+      <p><strong>Distância de Nós:</strong> ${res.distanciaKm} km</p>
       <p><strong>Tempo estimado de carro:</strong> ${res.duracaoMinutos} min</p>
     `;
   } catch (err) {
